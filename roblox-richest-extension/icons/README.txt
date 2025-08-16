@@ -1,0 +1,1 @@
+Icons are generated from icon.svg. If you need PNGs, export 16/48/128 px from the SVG.
