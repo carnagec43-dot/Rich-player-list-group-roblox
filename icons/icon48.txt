@@ -1,0 +1,8 @@
+This should be a 48x48 PNG icon.
+    
+To generate the actual PNG:
+1. Install a tool like ImageMagick or use an online SVG to PNG converter
+2. Convert the icon.svg file to 48x48 PNG
+3. Save as icon48.png
+
+For now, you can use the SVG file directly or create a simple colored square.
