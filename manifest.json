@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Roblox Rich Player Finder",
+  "version": "1.0",
+  "description": "Find the richest players in Roblox communities based on limited items worth over 10,000 Robux",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://www.roblox.com/*",
+    "https://web.roblox.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Roblox Rich Player Finder"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.roblox.com/*", "https://web.roblox.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
