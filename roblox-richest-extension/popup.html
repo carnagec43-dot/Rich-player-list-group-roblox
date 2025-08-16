@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Roblox Group Richest Finder</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Roblox Richest</h1>
+      <label for="groupUrl">Roblox group link</label>
+      <input id="groupUrl" type="text" placeholder="https://www.roblox.com/groups/12345/Group-Name" />
+      <div class="buttons">
+        <button id="searchBtn">Search for list</button>
+        <button id="refreshBtn" disabled>Refresh</button>
+      </div>
+      <div id="status" class="status"></div>
+      <div id="results"></div>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>

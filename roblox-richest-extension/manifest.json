@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Roblox Group Richest Finder",
+  "version": "1.0.0",
+  "description": "Enter a Roblox group link to list members ranked by Roblox-made limiteds RAP >= 10,000.",
+  "action": {
+    "default_title": "Roblox Richest",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "128": "icons/icon.svg"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://groups.roblox.com/*",
+    "https://inventory.roblox.com/*",
+    "https://catalog.roblox.com/*",
+    "https://users.roblox.com/*"
+  ]
+}
