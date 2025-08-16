@@ -31,15 +31,15 @@ refreshBtn.addEventListener('click', async () => {
 });
 
 function extractGroupId(text) {
-  // Common patterns: https://www.roblox.com/groups/12345/Name, ...?groupId=12345, numeric input
+  // Prefer explicit patterns first
+  let m = text.match(/\/communities\/(\d+)(?:[\/#?]|$)/i);
+  if (m) return m[1];
+  m = text.match(/\/groups\/(\d+)(?:[\/#?]|$)/i);
+  if (m) return m[1];
+  m = text.match(/[?&](?:groupId|communityId)=(\d+)/i);
+  if (m) return m[1];
+  // Fallback: first long number anywhere in the string
   const directId = text.match(/\b(\d{3,})\b/);
-  if (text.includes('/groups/')) {
-    const m = text.match(/\/groups\/(\d+)\//);
-    if (m) return m[1];
-  }
-  const q = text.match(/[?&]groupId=(\d+)/);
-  if (q) return q[1];
-  // Fallback: first long number in the string
   if (directId) return directId[1];
   return null;
 }
