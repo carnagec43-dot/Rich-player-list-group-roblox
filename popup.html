@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox Rich Player Finder</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>💰 Rich Player Finder</h1>
+            <p>Find players with limiteds worth 10,000+ Robux</p>
+        </div>
+        
+        <div class="input-section">
+            <label for="communityLink">Roblox Community Link:</label>
+            <input 
+                type="url" 
+                id="communityLink" 
+                placeholder="https://www.roblox.com/groups/..."
+                class="link-input"
+            >
+            <div class="button-group">
+                <button id="searchBtn" class="btn btn-primary">
+                    <span class="btn-text">🔍 Search for List</span>
+                    <span class="btn-loading" style="display: none;">⏳ Searching...</span>
+                </button>
+                <button id="refreshBtn" class="btn btn-secondary">
+                    <span class="btn-text">🔄 Refresh</span>
+                    <span class="btn-loading" style="display: none;">⏳ Refreshing...</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="status-section">
+            <div id="status" class="status-message"></div>
+            <div id="progress" class="progress-bar" style="display: none;">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+
+        <div class="results-section">
+            <div class="results-header">
+                <h3>🏆 Rich Players Found</h3>
+                <span id="playerCount" class="player-count">0 players</span>
+            </div>
+            <div id="resultsList" class="results-list">
+                <div class="empty-state">
+                    <p>Enter a Roblox community link and click "Search for List" to find rich players</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Limited items worth 10,000+ Robux only</p>
+        </div>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>
