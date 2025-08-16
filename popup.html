@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox Rich Player Finder</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Roblox Rich Player Finder</h1>
+        <div class="input-section">
+            <label for="communityUrl">Roblox Community URL:</label>
+            <input type="text" id="communityUrl" placeholder="https://www.roblox.com/groups/123456/group-name">
+            <div class="button-group">
+                <button id="searchBtn">Search for List</button>
+                <button id="refreshBtn">Refresh</button>
+            </div>
+        </div>
+        
+        <div class="status-section">
+            <div id="statusMessage"></div>
+            <div id="loadingSpinner" class="spinner hidden"></div>
+        </div>
+        
+        <div class="results-section">
+            <h2>Rich Players (10k+ Robux in Limiteds)</h2>
+            <div id="playersList"></div>
+        </div>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>
